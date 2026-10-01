@@ -61,3 +61,7 @@ jobs:
         run: gh release upload ${{ needs.release-please.outputs.tag_name }} dist/* --repo ${{ github.repository }}
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Notify Homebrew tap
+        run: gh api repos/jadenzaleski/homebrew-tap/dispatches -f event_type=bible-translations-released
+        env:
+          GH_TOKEN: ${{ secrets.TAP_DISPATCH_TOKEN }}
