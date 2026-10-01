@@ -4,8 +4,14 @@
   <a href="https://github.com/jadenzaleski/bible-translations/actions/workflows/ci.yml">
     <img alt="CI" src="https://img.shields.io/github/actions/workflow/status/jadenzaleski/bible-translations/ci.yml?branch=master&style=flat-square&label=CI">
   </a>
+  <a href="https://github.com/jadenzaleski/bible-translations/actions/workflows/cd.yml">
+    <img alt="CD" src="https://img.shields.io/github/actions/workflow/status/jadenzaleski/bible-translations/cd.yml?branch=master&style=flat-square&label=CD">
+  </a>
   <a href="https://github.com/jadenzaleski/bible-translations/actions/workflows/lint.yml">
     <img alt="Lint" src="https://img.shields.io/github/actions/workflow/status/jadenzaleski/bible-translations/lint.yml?branch=master&style=flat-square&label=lint">
+  </a>
+  <a href="https://github.com/jadenzaleski/bible-translations/actions/workflows/docs.yml">
+    <img alt="Docs" src="https://img.shields.io/github/actions/workflow/status/jadenzaleski/bible-translations/docs.yml?branch=master&style=flat-square&label=docs">
   </a>
   <a href="https://github.com/jadenzaleski/bible-translations/releases/latest">
     <img alt="GitHub Release" src="https://img.shields.io/github/v/release/jadenzaleski/bible-translations?style=flat-square">
@@ -42,7 +48,16 @@ Full API and CLI reference: https://jadenzaleski.github.io/bible-translations/
 
 ## Install
 
-Install the CLI with [uv](https://docs.astral.sh/uv/):
+Install with [brew](https://brew.sh):
+
+```bash
+brew tap jadenzaleski/tap
+brew install bible-translations
+# or
+brew install jadenzaleski/tap/bible-translations
+```
+
+Install with [uv](https://docs.astral.sh/uv/):
 
 ```bash
 uv tool install bible-translations
@@ -61,8 +76,6 @@ bt
 # or
 bible-translations
 ```
-
-> If `bt` isn't found afterward, run `uv tool update-shell` and open a new terminal.
 
 To use `bible-translations` as a library, add it to your own project instead:
 
