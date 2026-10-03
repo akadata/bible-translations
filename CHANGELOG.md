@@ -1,5 +1,45 @@
 # Changelog
 
+## [1.0.0](https://github.com/akadata/bible-translations/compare/v1.0.0...v1.0.0) (2026-10-03)
+
+
+### Features
+
+* add ASV (American Standard Version) translation ([c45268f](https://github.com/akadata/bible-translations/commit/c45268f9ae7e2a63f788e1a1edd9ec09145325c8))
+* add flatten_books/FlatVerse for flattening nested translation results ([#22](https://github.com/akadata/bible-translations/issues/22)) ([96b3fff](https://github.com/akadata/bible-translations/commit/96b3fffd75a68b419f6e242046f005059f5857c6))
+* add WEB, YLT, DARBY, and DRA translations ([aeae36f](https://github.com/akadata/bible-translations/commit/aeae36f5dd1cb372dd34634fbe31984374253940))
+* define the stable public API surface in bible_translations/__init__.py ([8c14211](https://github.com/akadata/bible-translations/commit/8c142115726e2ffe14fc32dd2fcae27e84dea2f7))
+* wire flatten API into Exporter and CLI as a --flat flag ([#22](https://github.com/akadata/bible-translations/issues/22)) ([254db44](https://github.com/akadata/bible-translations/commit/254db44d5459284d285406c15ced1e9e7c25786f))
+
+
+### Bug Fixes
+
+* coerce Exporter output_dir to a Path so the CLI's default export location works ([44d2244](https://github.com/akadata/bible-translations/commit/44d224458eea8b68c1346b3ca4d400eff09ada6a))
+* ensure blank line before ANSI art in CLI output ([41d12f3](https://github.com/akadata/bible-translations/commit/41d12f303653ba1bc7bf0513e1478f97a008bd78))
+* parse chapters per verse span so paragraph-style translations (ASV) return every verse ([4ae3282](https://github.com/akadata/bible-translations/commit/4ae32822e175121288af98f30186b147f580c938))
+* strip footnote and cross-reference markers from verse text ([c59e981](https://github.com/akadata/bible-translations/commit/c59e981c037512036ddf02f9cf40e2d46fbb198a))
+* strip surrounding whitespace from single-verse text ([38616a1](https://github.com/akadata/bible-translations/commit/38616a11452751cf18cd56ea321bd749d0f89556))
+
+
+### Documentation
+
+* add mkdocs site with auto-generated API and CLI reference ([a2c7598](https://github.com/akadata/bible-translations/commit/a2c759847062edd13772d093a00e017708921def))
+* add v1.0.0 stable release implementation plan ([fd8aae8](https://github.com/akadata/bible-translations/commit/fd8aae85d0154535afe88f2c3c1335234b1fecee))
+* default the docs site to dark mode ([0faf328](https://github.com/akadata/bible-translations/commit/0faf328d76980a8af38397862d6ad140bbe27f09))
+* enhance README with CD/docs badges and Homebrew installation steps ([02a558e](https://github.com/akadata/bible-translations/commit/02a558e780324f7c0946c5fc7d143766e875853a))
+* list supported translations on the docs site and remove the internal plan ([635ae5d](https://github.com/akadata/bible-translations/commit/635ae5d99c69f3dec3df160c241643fa8c3319bd))
+* point the docs theme at the custom favicon ([f681f52](https://github.com/akadata/bible-translations/commit/f681f52569be2f5c6a80e992fb42e468eb73ffec))
+* remove copyright column from translations table and simplify changelog structure ([cf4fe2f](https://github.com/akadata/bible-translations/commit/cf4fe2fd491088e0aa37912d70d4cf98c08e619a))
+* reposition README as a fetch-on-demand tool, fix CONTRIBUTING branch ref, trim CHANGELOG for release-please ([00c70be](https://github.com/akadata/bible-translations/commit/00c70beb46aef405cd92776bf15f4a109eb09696))
+* update installation instructions to include `uv` CLI commands ([2136361](https://github.com/akadata/bible-translations/commit/2136361923c6273aeb5e3d4c946467591873ef45))
+* update README links and add favicon to docs site ([e54433a](https://github.com/akadata/bible-translations/commit/e54433a0708c68f829aad71bb24dbc884016d8ce))
+
+
+### Miscellaneous
+
+* release 1.0.0-rc.1 ([18fd44b](https://github.com/akadata/bible-translations/commit/18fd44b5ffd2fc40097d5aa8498f1f093e17fc33))
+* update project metadata and dependencies for production readiness ([f1abda7](https://github.com/akadata/bible-translations/commit/f1abda7bfca3b13cb3571531623eb49f1bccbc20))
+
 ## [1.0.0](https://github.com/jadenzaleski/bible-translations/compare/v1.0.0-rc.1...v1.0.0) (2026-09-22)
 
 
