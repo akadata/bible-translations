@@ -1,0 +1,103 @@
+[project]
+name = "bible-translations"
+version = "1.0.0"
+description = "A Python package for discovering, fetching, and working with publicly available Bible translations and translation metadata."
+authors = [
+    { name = "Jaden Zaleski", email = "jadenzaleski@icloud.com" },
+]
+maintainers = [
+    { name = "Jaden Zaleski", email = "jadenzaleski@icloud.com" },
+]
+readme = { file = "README.md", content-type = "text/markdown" }
+requires-python = ">=3.11"
+dependencies = [
+    "aiohttp",
+    "beautifulsoup4",
+    "typing-extensions",
+    "click",
+    "rich",
+]
+license = "MIT"
+license-files = ["LICEN[CS]E*"]
+keywords = [
+    "bible",
+    "translation",
+    "holy",
+    "scrape",
+    "fetch"
+]
+# https://pypi.org/classifiers/
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Topic :: Religion",
+    "Topic :: Internet :: WWW/HTTP",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+]
+
+[project.urls]
+Homepage = "https://github.com/jadenzaleski/bible-translations"
+Documentation = "https://jadenzaleski.github.io/bible-translations/"
+Issues = "https://github.com/jadenzaleski/bible-translations/issues"
+Changelog = "https://github.com/jadenzaleski/bible-translations/releases"
+
+[project.scripts]
+bt = "bible_translations.cli:main"
+bible-translations = "bible_translations.cli:main"
+
+[build-system]
+requires = [
+    "setuptools>=65",
+    "wheel"
+]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.package-data]
+bible_translations = ["py.typed"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "pytest-asyncio",
+    "pytest-rerunfailures",
+    "ruff",
+    "build"
+]
+docs = [
+    "mkdocs<2",
+    "mkdocs-material",
+    "mkdocstrings[python]",
+    "mkdocs-click"
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+markers = [
+    "live: exercises the real network (BibleGateway) — slower and can be flaky.",
+]
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.lint]
+select = [
+    "E",
+    "W",
+    "F",
+    "I"
+]
+
+[tool.ruff.format]
+line-ending = "lf"
